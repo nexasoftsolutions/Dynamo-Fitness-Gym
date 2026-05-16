@@ -1,32 +1,12 @@
 import React from 'react';
-import { Play, TrendingUp, Dumbbell, Menu } from 'lucide-react';
+import { Play, TrendingUp, Dumbbell } from 'lucide-react';
+import { Header } from './body/Header';
 
 const SuccessStories = () => {
   return (
     <div className="bg-[#0A0A0A] text-white font-sans selection:bg-[#E2FF00] selection:text-black">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-[#0A0A0A]/80 backdrop-blur-2xl border-b border-[#3F3F3F]/30">
-        <div className="flex justify-between items-center w-full px-6 md:px-16 py-4 max-w-[1440px] mx-auto">
-          <div className="font-black text-2xl tracking-tighter text-[#E2FF00] font-['Anybody']">
-            DYNAMO
-          </div>
-          
-          <div className="hidden md:flex gap-8 items-center font-semibold text-[0.75rem] uppercase tracking-widest text-[#A1A1A1]">
-            {['Home', 'About', 'Facilities', 'Classes', 'Trainers', 'Pricing'].map((item) => (
-              <a key={item} className="hover:text-[#E2FF00] transition-colors" href="#">{item}</a>
-            ))}
-          </div>
-
-          <div className="flex items-center gap-4">
-            <button className="hidden md:block bg-[#E2FF00] text-black font-semibold text-[0.75rem] uppercase tracking-widest px-6 py-2 active:scale-95 transition-transform duration-200">
-              JOIN ELITE
-            </button>
-            <button className="md:hidden text-[#E2FF00]">
-              <Menu size={24} />
-            </button>
-          </div>
-        </div>
-      </nav>
+      <Header />
 
       <main>
         {/* Hero Section */}

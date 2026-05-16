@@ -4,42 +4,15 @@ import {
   MapPin, 
   Phone, 
   Mail, 
-  Menu, 
   ArrowRight 
 } from 'lucide-react';
+import { Header } from './body/Header';
 
 const ContactPage = () => {
   return (
     <div className="bg-[#131313] text-[#e5e2e1] min-h-screen flex flex-col font-sans selection:bg-[#c3f400] selection:text-[#131313]">
       {/* Navigation */}
-      <header className="fixed top-0 w-full z-50 bg-[#131313]/80 backdrop-blur-2xl border-b border-[#444933]/30">
-        <div className="flex justify-between items-center w-full px-6 md:px-16 py-4 max-w-[1440px] mx-auto">
-          <div className="text-2xl md:text-3xl font-black tracking-tighter text-white uppercase">
-            DYNAMO
-          </div>
-          
-          <nav className="hidden md:flex items-center gap-8 font-mono text-[12px] tracking-widest font-bold uppercase">
-            {['Home', 'About', 'Facilities', 'Classes', 'Trainers', 'Pricing'].map((item) => (
-              <a 
-                key={item}
-                href="#" 
-                className="text-[#c4c9ac] hover:text-white transition-all duration-300 px-2 py-1 hover:bg-[#353534]/50"
-              >
-                {item}
-              </a>
-            ))}
-          </nav>
-
-          <div className="flex items-center gap-6">
-            <button className="hidden md:block font-mono text-[12px] font-bold tracking-widest text-[#161e00] bg-[#c3f400] px-6 py-2 hover:bg-[#abd600] transition-colors uppercase">
-              JOIN ELITE
-            </button>
-            <button className="text-[#c3f400] hover:bg-[#353534]/50 transition-all p-2">
-              <Menu size={24} />
-            </button>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Main Canvas */}
       <main className="flex-grow w-full max-w-[1440px] mx-auto px-6 md:px-16 py-32 md:py-40 flex flex-col gap-16">

@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
-  Menu, 
-  X, 
   ExternalLink, 
   Mail, 
   Dumbbell, 
@@ -9,9 +7,9 @@ import {
   Target, 
   ArrowUpRight
 } from 'lucide-react';
+import { Header } from './body/Header';
 
 const TrainersPage = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className="bg-[#131313] text-[#e5e2e1] min-h-screen font-sans selection:bg-[#c3f400] selection:text-[#131313]">
@@ -19,32 +17,7 @@ const TrainersPage = () => {
       <div className="fixed inset-0 pointer-events-none opacity-[0.03] z-[9999] bg-[url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')]"></div>
 
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-[#131313]/80 backdrop-blur-2xl border-b border-[#444933]/30">
-        <div className="flex justify-between items-center w-full px-6 md:px-16 py-4 max-w-[1440px] mx-auto">
-          <a href="/" className="font-black text-2xl md:text-3xl tracking-tighter uppercase italic text-white">
-            Dynamo
-          </a>
-
-          {/* Desktop Links */}
-          <ul className="hidden md:flex items-center gap-8 text-[12px] font-mono tracking-widest uppercase">
-            <li><a href="#" className="text-[#c4c9ac] hover:text-white transition-colors">Home</a></li>
-            <li><a href="#" className="text-[#c4c9ac] hover:text-white transition-colors">About</a></li>
-            <li><a href="#" className="text-[#c4c9ac] hover:text-white transition-colors">Facilities</a></li>
-            <li><a href="#" className="text-[#c4c9ac] hover:text-white transition-colors">Classes</a></li>
-            <li><a href="#" className="text-[#c3f400] border-b-2 border-[#c3f400] pb-1">Trainers</a></li>
-            <li><a href="#" className="text-[#c4c9ac] hover:text-white transition-colors">Pricing</a></li>
-          </ul>
-
-          <div className="flex items-center gap-4">
-            <button className="hidden md:block bg-[#c3f400] text-[#131313] font-mono text-[12px] px-6 py-3 uppercase font-bold tracking-widest hover:bg-[#abd600] transition-colors">
-              Join Elite
-            </button>
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-white">
-              {isMenuOpen ? <X /> : <Menu />}
-            </button>
-          </div>
-        </div>
-      </nav>
+      <Header />
 
       <main className="pt-32 pb-24 px-6 md:px-16 max-w-[1440px] mx-auto w-full">
         {/* Header Section */}

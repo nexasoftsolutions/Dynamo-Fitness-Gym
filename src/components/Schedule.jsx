@@ -1,5 +1,6 @@
 import React from 'react';
-import { Menu, Clock, User, ChevronDown } from 'lucide-react';
+import { Clock, User, ChevronDown } from 'lucide-react';
+import { Header } from './body/Header';
 
 const Schedule = () => {
   return (
@@ -24,32 +25,7 @@ const Schedule = () => {
 
       <div className="obsidian-bg min-h-screen flex flex-col">
         {/* Top Navigation */}
-        <header className="fixed top-0 w-full z-50 bg-[#131313]/80 backdrop-blur-2xl border-b border-[#444933]/30">
-          <div className="flex justify-between items-center w-full px-6 md:px-16 py-4 max-w-[1440px] mx-auto">
-            <a className="font-['Anybody'] text-2xl font-extrabold tracking-tighter text-white uppercase" href="#">
-              DYNAMO
-            </a>
-            <nav className="hidden md:flex items-center gap-8">
-              {['Home', 'About', 'Facilities', 'Classes', 'Trainers', 'Pricing'].map((item) => (
-                <a 
-                  key={item}
-                  href="#" 
-                  className={`font-['Space_Mono'] text-[12px] font-bold uppercase tracking-widest transition-all px-3 py-2 rounded ${item === 'Classes' ? 'text-[#c3f400] border-b-2 border-[#c3f400]' : 'text-[#c4c9ac] hover:text-white hover:bg-[#353534]/50'}`}
-                >
-                  {item}
-                </a>
-              ))}
-            </nav>
-            <div className="flex items-center gap-4">
-              <button className="hidden md:block bg-[#c3f400] text-[#161e00] font-['Space_Mono'] text-[12px] font-bold px-6 py-3 rounded hover:bg-[#abd600] transition-colors uppercase">
-                JOIN ELITE
-              </button>
-              <button className="md:hidden text-[#c3f400] p-2">
-                <Menu size={24} />
-              </button>
-            </div>
-          </div>
-        </header>
+        <Header />
 
         {/* Main Content Area */}
         <main className="flex-grow pt-[120px] pb-24 px-6 md:px-16 max-w-[1440px] mx-auto w-full flex flex-col gap-12">
